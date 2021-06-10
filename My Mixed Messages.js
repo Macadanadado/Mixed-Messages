@@ -20,9 +20,9 @@ const nonsense ={
         return this.days[randDayIndex]
     },
     getFinalMessage: function (){
-        let grammer;
+        let grammer = 'a';
         const myColor = this.getRandColor()
-        switch (this.getRandColor().charAt(0)) {
+        switch (myColor[0]) {
             case 'a':
                 grammer = 'an';
                 break;
@@ -42,7 +42,7 @@ const nonsense ={
                 grammer = 'a'
                 break;
         }
-        return `Never ${this.getRandVerb()} ${grammer} ${this.getRandColor()} ${this.getRandAnimal()}, especially if its ${this.getRandDay()}!`
+        return `Never ${this.getRandVerb()} ${grammer} ${myColor} ${this.getRandAnimal()}, especially if its ${this.getRandDay()}!`
     }
 };
 console.log(nonsense.getFinalMessage())
